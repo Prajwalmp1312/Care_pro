@@ -1,0 +1,75 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 806 >>
+stream
+BT
+/F1 16 Tf
+54 742 Td
+(Echocardiogram Report) Tj
+0 -28 Td
+/F1 10 Tf
+(DEMO DATA - NOT A REAL PATIENT RECORD) Tj
+0 -14 Td
+(Patient: Evelyn Carter \(fictional\)) Tj
+0 -14 Td
+(Document date: 2026-06-25) Tj
+0 -14 Td
+(Category: Imaging) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Summary: Fictional echocardiogram shows preserved systolic function with mild diastolic) Tj
+0 -14 Td
+(dysfunction.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Structured metrics:) Tj
+0 -14 Td
+(- Ejection fraction: 60 %) Tj
+0 -14 Td
+(- Left atrial volume index: 36 mL/m2) Tj
+0 -14 Td
+(- RVSP: 31 mmHg) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Key findings:) Tj
+0 -14 Td
+(- Preserved left ventricular systolic function) Tj
+0 -14 Td
+(- Mild diastolic dysfunction) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(This document is fictional and intended only for CareConnect testing.) Tj
+0 -14 Td
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000317 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1174
+%%EOF

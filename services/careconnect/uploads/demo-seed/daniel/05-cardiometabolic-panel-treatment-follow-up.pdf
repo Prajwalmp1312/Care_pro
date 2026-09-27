@@ -1,0 +1,81 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 910 >>
+stream
+BT
+/F1 16 Tf
+54 742 Td
+(Cardiometabolic Panel - Treatment Follow-up) Tj
+0 -28 Td
+/F1 10 Tf
+(DEMO DATA - NOT A REAL PATIENT RECORD) Tj
+0 -14 Td
+(Patient: Daniel Brooks \(fictional\)) Tj
+0 -14 Td
+(Document date: 2026-07-14) Tj
+0 -14 Td
+(Category: Laboratory) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Summary: Follow-up shows improvement in glycemic and lipid markers; blood pressure) Tj
+0 -14 Td
+(remains above goal.) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Structured metrics:) Tj
+0 -14 Td
+(- HbA1c: 7.3 %) Tj
+0 -14 Td
+(- LDL: 112 mg/dL) Tj
+0 -14 Td
+(- Triglycerides: 168 mg/dL) Tj
+0 -14 Td
+(- Systolic BP: 142 mmHg) Tj
+0 -14 Td
+(- Weight: 91.2 kg) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(Key findings:) Tj
+0 -14 Td
+(- HbA1c improved but remains above goal) Tj
+0 -14 Td
+(- LDL improved) Tj
+0 -14 Td
+(- Blood pressure remains elevated) Tj
+0 -14 Td
+() Tj
+0 -14 Td
+(This document is fictional and intended only for CareConnect testing.) Tj
+0 -14 Td
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000247 00000 n 
+0000000317 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1278
+%%EOF

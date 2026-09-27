@@ -1,0 +1,26 @@
+{
+  "name": "mobile",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "expo": "~57.0.12",
+    "expo-document-picker": "~57.0.1",
+    "expo-secure-store": "~57.0.1",
+    "expo-status-bar": "~57.0.1",
+    "expo-web-browser": "~57.0.2",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.2",
+    "react-native-web": "^0.21.2"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "android:offline": "expo start --android --offline --port 8082",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "verify:android": "expo export --platform android --output-dir dist/android",
+    "verify:ios": "expo export --platform ios --output-dir dist/ios"
+  },
+  "private": true
+}

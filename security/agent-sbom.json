@@ -1,0 +1,47 @@
+{
+  "bomFormat": "CareConnect-Agent-SBOM",
+  "specVersion": "1.0",
+  "metadata": {
+    "component": "CareConnect Pro",
+    "dataClassification": ["PII", "PHI", "PFI"],
+    "notes": "SQLAlchemy and Chroma PersistentClient are access components, not independent logical systems of record. Redis is not deployed by this repository."
+  },
+  "agent": {
+    "name": "CareConnect Health Assistant"
+  },
+  "nodes": [
+    {"id": "Persistentclient", "type": "DATASTORE", "subtype": "VECTOR_STORE_CLIENT", "contains": ["PII", "PHI"], "deployed": true},
+    {"id": "Sqlalchemy", "type": "DATASTORE", "subtype": "DATA_ACCESS_COMPONENT", "contains": ["PII", "PHI", "PFI"], "deployed": true},
+    {"id": "Mysql", "type": "DATASTORE", "subtype": "RELATIONAL_DATABASE", "contains": ["PII", "PHI", "PFI"], "deployed": true},
+    {"id": "Redis", "type": "DATASTORE", "subtype": "SHARED_RATE_LIMIT_STORE", "contains": ["PII"], "deployed": false},
+    {"id": "Db Write", "type": "CAPABILITY", "highPrivilege": true},
+    {"id": "Email Out", "type": "CAPABILITY", "highPrivilege": true},
+    {"id": "Filesystem Write", "type": "CAPABILITY", "highPrivilege": true},
+    {"id": "Network Out", "type": "CAPABILITY", "highPrivilege": true},
+    {"id": "Social Media Out", "type": "CAPABILITY", "highPrivilege": true, "enabled": false},
+    {"id": "Session Authentication", "type": "AUTH", "implementation": "get_current_user"},
+    {"id": "Resource Authorization", "type": "GUARDRAIL", "implementation": "require_patient_access"},
+    {"id": "Database Access Control", "type": "GUARDRAIL", "controls": ["authenticated-session", "role-access", "owner-scope", "parameterized-query"]},
+    {"id": "Vector Store Isolation", "type": "GUARDRAIL", "controls": ["patient-scoped-collection", "record-scoped-delete", "restricted-storage-root"]},
+    {"id": "Filesystem Safety", "type": "GUARDRAIL", "implementation": "security_foundation.store_upload"},
+    {"id": "Outbound Disclosure Control", "type": "GUARDRAIL", "controls": ["authenticated-actor", "authorized-recipient", "minimum-necessary"]}
+  ],
+  "edges": [
+    {"source": "Persistentclient", "relationship": "PROTECTED_BY", "target": "Vector Store Isolation"},
+    {"source": "Sqlalchemy", "relationship": "PROTECTED_BY", "target": "Database Access Control"},
+    {"source": "Mysql", "relationship": "PROTECTED_BY", "target": "Database Access Control"},
+    {"source": "Redis", "relationship": "PROTECTED_BY", "target": "Database Access Control"},
+    {"source": "Sqlalchemy", "relationship": "CONNECTS_TO", "target": "Mysql"},
+    {"source": "Persistentclient", "relationship": "CONNECTS_TO", "target": "Vector Store Isolation"},
+    {"source": "Session Authentication", "relationship": "PROTECTS", "target": "Db Write"},
+    {"source": "Resource Authorization", "relationship": "PROTECTS", "target": "Db Write"},
+    {"source": "Session Authentication", "relationship": "PROTECTS", "target": "Email Out"},
+    {"source": "Outbound Disclosure Control", "relationship": "PROTECTS", "target": "Email Out"},
+    {"source": "Session Authentication", "relationship": "PROTECTS", "target": "Filesystem Write"},
+    {"source": "Filesystem Safety", "relationship": "PROTECTS", "target": "Filesystem Write"},
+    {"source": "Session Authentication", "relationship": "PROTECTS", "target": "Network Out"},
+    {"source": "Outbound Disclosure Control", "relationship": "PROTECTS", "target": "Network Out"},
+    {"source": "Session Authentication", "relationship": "PROTECTS", "target": "Social Media Out"},
+    {"source": "Outbound Disclosure Control", "relationship": "PROTECTS", "target": "Social Media Out"}
+  ]
+}

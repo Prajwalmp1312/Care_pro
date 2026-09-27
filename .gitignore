@@ -1,0 +1,26 @@
+# Node
+node_modules/
+.expo/
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+chroma_db/
+chroma_cache/
+
+# Build
+build/
+dist/
+
+# Environment
+.env
+.env.local
+apps/mobile/.env
+
+# Logs
+*.log
+
+#Backend
+backend/uploads/
